@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 import cl from './Header.module.css';
-import Logo from '../Logo/Logo';
-import Profile from './Profile';
+import Logo from '../../Logo/Logo';
+import Profile from '../Profile/Profile';
 
 const Header = () => {
     return (

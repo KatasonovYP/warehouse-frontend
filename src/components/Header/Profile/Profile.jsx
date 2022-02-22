@@ -9,7 +9,7 @@ function Profile() {
                 <p>email.domen.com</p>
             </div>
             <div className={cl.avatar}></div>
-            <i class="fa-solid fa-angle-down fa-xl"></i>
+            <i className="fa-solid fa-angle-down fa-xl"></i>
         </div>
     );
 }

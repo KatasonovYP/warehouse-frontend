@@ -1,0 +1,15 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    margin: 1rem;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #4364f7;
+}
+
