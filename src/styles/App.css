@@ -10,12 +10,11 @@
 }
 
 #root {
+    margin: auto;
     width: 1170px;
-    margin: auto;   
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .App {
