@@ -1,13 +1,14 @@
 import React from 'react';
 import cl from './Navbar.module.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <nav className={cl.navbar}>
-            <p>Задачи</p>
-            <p>Склады</p>
-            <p>Аналитика</p>
-            <p>Средства</p>
+            <a href='/'>Задачи</a>
+            <a href='/storages'>Склады</a>
+            <a href='/items'>Аналитика</a>
+            <a href='/'>Средства</a>
         </nav>
     );
 };
