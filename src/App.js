@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles/App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Tasks from './pages/Tasks';
-import Storages from './pages/Storages';
-import Items from './pages/Items';
+import Tasks from './pages/Tasks/Tasks';
+import Storages from './pages/Storages/Storages';
+import Items from './pages/Items/Items';
 
 function App() {
     return (
