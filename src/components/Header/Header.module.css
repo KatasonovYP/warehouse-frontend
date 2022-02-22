@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    width: 1070px;
+    margin-top: 1rem;
+
+    font-weight: 600;
+    font-size: 18px;
+}
