@@ -29,17 +29,17 @@ function Tasks() {
             <div className={cl.TaskAreas}>
                 <TaskArea>
                     {tasks.map((task) => (
-                        <TaskCard props={task} key={task.id} />
+                        <TaskCard key={task.id} props={task} />
                     ))}
                 </TaskArea>
                 <TaskArea>
                     {tasks.map((task) => (
-                        <TaskCard props={task} key={task.id} />
+                        <TaskCard key={task.id} props={task} />
                     ))}
                 </TaskArea>
                 <TaskArea>
                     {tasks.map((task) => (
-                        <TaskCard props={task} key={task.id} />
+                        <TaskCard key={task.id} props={task} />
                     ))}
                 </TaskArea>
             </div>
