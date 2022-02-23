@@ -1,23 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import cl from './Storages.module.css';
 import Header from '../../components/Header/Header/Header';
 import StorageCard from '../../components/StorageCard/StorageCard';
 
 function Storages() {
-    const [storages, setStorages] = useState([
-        {
-            id: 0,
-            name: 'Первый',
-            description:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea facilis accusantium perspiciatis perferendis ducimus quia magni alias!',
-        },
-        {
-            id: 1,
-            name: 'Второй',
-            description:
-                'Iste quos iure et obcaecati! Fugit quasi minus expedita, iure sapiente a perferendis. Corrupti, magni tempore odit assumenda consequuntur recusandae illum nemo cum corporis at? Iste quos iure et obcaecati!',
-        },
-    ]);
+    const [storages, setStorages] = useState([]);
+
+    useEffect(() => {
+        fetch('http://127.0.0.1:8000/api/users/admin/warehouses')
+            .then((response) => response.json())
+            .then((responses) => setStorages(responses));
+    }, []);
+
     return (
         <div>
             <Header />
