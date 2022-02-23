@@ -10,7 +10,7 @@ function SignIn() {
                 { id: 1, type: 'password', placeholder: 'Пароль' },
             ]}
             btnText='Авторизироваться'
-            path='/'
+            path='/storages'
         />
     );
 }

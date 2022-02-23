@@ -11,7 +11,7 @@ function SignUp() {
                 { id: 2, type: 'password', placeholder: 'Пароль' },
             ]}
             btnText='Зарегестрироваться'
-            path='/'
+            path='/storages'
         />
     );
 }

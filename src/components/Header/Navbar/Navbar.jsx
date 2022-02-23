@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
         <nav className={cl.navbar}>
-            <Link to='/'>Задачи</Link>
+            <Link to='/tasks'>Задачи</Link>
             <Link to='/storages'>Склады</Link>
             <Link to='/items'>Аналитика</Link>
-            <Link to='/'>Средства</Link>
+            <Link to='/'>Информация</Link>
         </nav>
     );
 };
