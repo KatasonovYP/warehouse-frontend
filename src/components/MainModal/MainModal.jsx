@@ -1,17 +1,26 @@
 import React from 'react';
-import cl from './MainModal.module.css'
+import cl from './MainModal.module.css';
 
-function MainModal(props) {
+function MainModal({ children, visible, setVisible, ...props }) {
+    const rootClasses = [cl.modal__wrapper];
+    if (visible) {
+        rootClasses.push(cl.active);
+    }
+
     return (
-        <div className={cl.modal__wrapper}>
-            <div className={cl.mainModal}>
+        <div
+            className={rootClasses.join(' ')}
+            onClick={() => setVisible(false)}
+        >
+            <div className={cl.mainModal} onClick={(e) => e.stopPropagation()}>
                 <div className={cl.header}>
                     <h3>{props.name}</h3>
-                    <i className="fa-solid fa-xmark"></i>
+                    <i
+                        onClick={() => setVisible(false)}
+                        className='fa-solid fa-xmark'
+                    ></i>
                 </div>
-                <div className={cl.body}>
-                    {props.children}
-                </div>
+                <div className={cl.body}>{children}</div>
             </div>
         </div>
     );
