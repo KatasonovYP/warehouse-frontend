@@ -1,5 +1,8 @@
 .task__area {
     background-color: #eee;
+
     width: 30%;
     min-height: 500px;
+    border-radius: 10px;
+    padding: 1rem;
 }
