@@ -1,10 +1,10 @@
 import React from 'react';
 import cl from './MainBtn.module.css';
 
-function BtnBlue(props) {
+function BtnBlue({children, ...props}) {
     return (
-        <button className={cl.btn + ' ' + cl[props.color]}>
-            {props.children}
+        <button className={cl.btn + ' ' + cl[props.color]} {...props}>
+            {children}
         </button>
     );
 }
