@@ -1,0 +1,12 @@
+.yInput {
+    outline: none;
+    border: none;
+    
+    padding: 1rem;
+    margin: 0.5em;
+    
+    background: #eee;
+    border-radius: 5px;
+
+    font-size: 16px;
+}
