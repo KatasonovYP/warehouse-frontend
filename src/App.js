@@ -17,6 +17,7 @@ function App() {
                 <Route path='/sign_in' element={<SignIn />} />
                 <Route path='/sign_up' element={<SignUp />} />
                 <Route path='/storages' element={<Storages />} />
+                <Route path='/storages/:id' element={<Items />} />
                 <Route path='/tasks' element={<Tasks />} />
                 <Route path='/items' element={<Items />} />
                 <Route path='/404' element={<Error />} />
