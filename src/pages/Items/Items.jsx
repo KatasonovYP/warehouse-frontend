@@ -9,14 +9,14 @@ import ItemCard from './../../components/ItemCard/ItemCard';
 
 function Items() {
     const [modal, setModal] = useState(false);
-    const [items, setitems] = useState([]);
+    const [items, setItems] = useState([]);
 
     const id = window.location.href.split('/')[4]
 
     useEffect(() => {
         fetch(`http://127.0.0.1:8000/api/warehouses/${id.toString()}/goods`)
             .then((response) => response.json())
-            .then((responses) => console.log(responses));
+            .then((responses) => setItems(responses));
     }, []);
 
     return (
@@ -28,7 +28,7 @@ function Items() {
             </MainBtn>
             <div>
                 {items.map(item => (
-                    <ItemCard {...item} />
+                    <ItemCard key={item.id} props={item} />
                 ))}
             </div>
             <MainModal name='Вещи' visible={modal} setVisible={setModal}>
