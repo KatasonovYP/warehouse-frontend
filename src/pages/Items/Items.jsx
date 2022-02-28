@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header/Header/Header';
 import MainModal from './../../components/MainModal/MainModal';
 import MainBtn from './../../components/button/MainBtn/MainBtn';
@@ -11,7 +10,7 @@ function Items() {
     const [modal, setModal] = useState(false);
     const [items, setItems] = useState([]);
 
-    const id = window.location.href.split('/')[4]
+    const id = window.location.href.split('/')[4];
 
     useEffect(() => {
         fetch(`http://127.0.0.1:8000/api/warehouses/${id.toString()}/goods`)
@@ -27,17 +26,25 @@ function Items() {
                 Create
             </MainBtn>
             <div>
-                {items.map(item => (
+                {items.map((item) => (
                     <ItemCard key={item.id} props={item} />
                 ))}
             </div>
             <MainModal name='Вещи' visible={modal} setVisible={setModal}>
-                <YInput type='text' placeholder='Name' />
-                <YInput type='text' placeholder='desctiption' />
-                <YInput type='text' placeholder='surname' />
+                <YInput type='text' placeholder='id' />
+                <YInput type='text' placeholder='title' />
+                <YInput type='text' placeholder='text' />
+                <YInput type='text' placeholder='price' />
                 <div>
-                    <MainBtn>Да</MainBtn>
-                    <MainBtn>нет</MainBtn>
+                    <MainBtn color='blue' onClick={() => {
+                        let data = new FormData();
+                        console.log(data);
+                    }}>
+                        Да
+                    </MainBtn>
+                    <MainBtn color='white' onClick={() => setModal(false)}>
+                        нет
+                    </MainBtn>
                 </div>
             </MainModal>
         </div>

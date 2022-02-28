@@ -19,7 +19,7 @@ function App() {
                 <Route path='/storages' element={<Storages />} />
                 <Route path='/storages/:id' element={<Items />} />
                 <Route path='/tasks' element={<Tasks />} />
-                <Route path='/items' element={<Items />} />
+                <Route path='/' element={<Welcome />} />
                 <Route path='/404' element={<Error />} />
                 <Route path='*' element={<Navigate to='/404' />} />
             </Routes>
