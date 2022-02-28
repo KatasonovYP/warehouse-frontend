@@ -1,0 +1,33 @@
+.btn {
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+
+    border: none;
+    cursor: pointer;
+
+    border-radius: 5px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    margin: 0.5rem;
+
+    transition: .2s ease-in-out;
+}
+
+.btn:hover {
+    background: #2B32B2;
+    outline-color: #2B32B2;
+    color: #fff;
+}
+
+.btn:active {
+    background: #7b80e9;
+    outline-color: #7b80e9;
+    transition: none;
+}
+
+.blue {
+    background: #4364f7;
+    color: #fff;
+}
