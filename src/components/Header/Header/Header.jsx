@@ -7,9 +7,9 @@ import Profile from '../Profile/Profile';
 const Header = () => {
     return (
         <div className={cl.header}>
-            <Logo/>
-            <Navbar/>
-            <Profile/>
+            <Logo />
+            <Navbar />
+            <Profile />
         </div>
     );
 };

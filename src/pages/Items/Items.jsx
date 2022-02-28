@@ -36,10 +36,13 @@ function Items() {
                 <YInput type='text' placeholder='text' />
                 <YInput type='text' placeholder='price' />
                 <div>
-                    <MainBtn color='blue' onClick={() => {
-                        let data = new FormData();
-                        console.log(data);
-                    }}>
+                    <MainBtn
+                        color='blue'
+                        onClick={() => {
+                            let data = new FormData();
+                            console.log(data);
+                        }}
+                    >
                         Да
                     </MainBtn>
                     <MainBtn color='white' onClick={() => setModal(false)}>

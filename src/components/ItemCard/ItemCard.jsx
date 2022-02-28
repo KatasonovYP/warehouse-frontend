@@ -5,7 +5,7 @@ import cl from './ItemCard.module.css';
 function ItemCard({ props }) {
     return (
         <div className={cl.itemCard}>
-            <input type="checkbox" />
+            <input type='checkbox' />
             <h3>{props.title}</h3>
             <p>{props.id}</p>
             <div>

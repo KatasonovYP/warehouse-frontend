@@ -1,7 +1,7 @@
 import React from 'react';
 import cl from './MainBtn.module.css';
 
-function BtnBlue({children, ...props}) {
+function BtnBlue({ children, ...props }) {
     return (
         <button className={cl.btn + ' ' + cl[props.color]} {...props}>
             {children}

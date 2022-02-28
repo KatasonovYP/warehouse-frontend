@@ -13,7 +13,7 @@ function Auth({ title, inputs, btnText, path }) {
                     <h2>{title}</h2>
                     <div className={cl.inputs}>
                         {inputs.map((input) => (
-                            <YInput key={input.id} {...input}/>
+                            <YInput key={input.id} {...input} />
                         ))}
                     </div>
                     <div>

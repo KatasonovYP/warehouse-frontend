@@ -3,7 +3,7 @@ import MainBtn from './../../components/button/MainBtn/MainBtn';
 import { Link } from 'react-router-dom';
 
 function Welcome() {
-    return (  
+    return (
         <div>
             <h1>Ware House</h1>
             <h2>Добро пожаловать</h2>

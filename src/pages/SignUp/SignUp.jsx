@@ -2,7 +2,7 @@ import React from 'react';
 import Auth from '../../components/Auth/Auth';
 
 function SignUp() {
-    return (  
+    return (
         <Auth
             title='Зарегестрироваться'
             inputs={[
