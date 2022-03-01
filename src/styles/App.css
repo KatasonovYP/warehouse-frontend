@@ -9,6 +9,10 @@
     color: #444;
 }
 
+body {
+    overflow-y: scroll;
+}
+
 #root {
     margin: auto;
     width: 1170px;
