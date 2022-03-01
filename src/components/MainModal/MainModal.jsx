@@ -1,16 +1,17 @@
 import React from 'react';
 import cl from './MainModal.module.css';
 
-function MainModal({ children, visible, setVisible, ...props }) {
+function MainModal({ children, visible, setVisible, onSubmit, ...props }) {
     const rootClasses = [cl.modal__wrapper];
     if (visible) {
         rootClasses.push(cl.active);
     }
 
     return (
-        <div
+        <form
             className={rootClasses.join(' ')}
             onClick={() => setVisible(false)}
+            onSubmit={onSubmit}
         >
             <div className={cl.mainModal} onClick={(e) => e.stopPropagation()}>
                 <div className={cl.header}>
@@ -22,7 +23,7 @@ function MainModal({ children, visible, setVisible, ...props }) {
                 </div>
                 <div className={cl.body}>{children}</div>
             </div>
-        </div>
+        </form>
     );
 }
 
