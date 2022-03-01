@@ -16,7 +16,6 @@ function CreateItemModal({ modal, setModal, warehouseId, fetchItems }) {
                 'Content-Type': 'application/json',
             },
         };
-        console.log(options);
         fetch('http://127.0.0.1:8000/api/goods/', options)
             .then((response) => response.json())
             .then((responses) => console.log(responses));
