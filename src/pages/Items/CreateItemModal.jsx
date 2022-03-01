@@ -11,7 +11,7 @@ function CreateItemModal({ modal, setModal, warehouseId }) {
     function postItem(body, id) {
         const options = {
             method: 'POST',
-            body: JSON.stringify({ warehouse: id, ...body }),
+            body: JSON.stringify({ warehouse: Number(id), ...body }),
             headers: {
                 'Content-Type': 'application/json',
             },
