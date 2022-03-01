@@ -29,7 +29,11 @@ function Items() {
                     <ItemCard key={item.id} props={item} />
                 ))}
             </div>
-            <CreateItemModal modal={modal} setModal={setModal} />
+            <CreateItemModal
+                modal={modal}
+                setModal={setModal}
+                warehouseId={id}
+            />
         </div>
     );
 }

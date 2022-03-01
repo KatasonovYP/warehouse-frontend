@@ -4,14 +4,14 @@ import MainBtn from './../../components/button/MainBtn/MainBtn';
 import YInput from '../../components/input/YInput';
 import { useForm } from 'react-hook-form';
 
-function CreateItemModal({ modal, setModal }) {
+function CreateItemModal({ modal, setModal, warehouseId }) {
     const { register, handleSubmit } = useForm();
-    const onSubmit = (data) => postItem(data);
+    const onSubmit = (data) => postItem(data, warehouseId);
 
-    function postItem(body) {
+    function postItem(body, id) {
         const options = {
             method: 'POST',
-            body: JSON.stringify(body),
+            body: JSON.stringify({ warehouse: id, ...body }),
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -29,26 +29,10 @@ function CreateItemModal({ modal, setModal }) {
             setVisible={setModal}
             onSubmit={handleSubmit(onSubmit)}
         >
-            {/* <input type='text' placeholder='id' {...register('id')} /> */}
-            <input type='text' placeholder='title' {...register('title')} />
-            <input
-                type='number'
-                placeholder='warehouse'
-                {...register('warehouse')}
-            />
-            {/* <input type='text' placeholder='text' {...register('text')} />
-            <input type='text' placeholder='price' {...register('price')} />
-            <select {...register('unit')}>
-                <option value='kg'>kg</option>
-                <option value='PCS'>PCS</option>
-                <option value='g'>g</option>
-            </select> */}
+            <input placeholder='title' {...register('title')} />
+            {/* <input placeholder='warehouse' {...register('warehouse')} /> */}
             <div>
-                <MainBtn
-                    type='submit'
-                    color='blue'
-                    onClick={() => setModal(false)}
-                >
+                <MainBtn color='blue' onClick={() => setModal(false)}>
                     Да
                 </MainBtn>
                 <MainBtn
