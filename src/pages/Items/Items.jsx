@@ -33,6 +33,7 @@ function Items() {
                 modal={modal}
                 setModal={setModal}
                 warehouseId={id}
+                fetchItems={fetchItems}
             />
         </div>
     );
