@@ -5,16 +5,15 @@ import CreateItemModal from './CreateItemModal';
 import MainBtn from './../../components/button/MainBtn/MainBtn';
 import useFetching from './../../hooks/useFetching';
 import ItemList from './../../components/ItemList/ItemList';
+import axios from 'axios';
 
 function Items() {
     const [items, setItems] = useState([]);
     const [modal, setModal] = useState(false);
     const [fetchItems, isLoading, error] = useFetching(async () => {
-        await fetch(
-            `http://127.0.0.1:8000/api/warehouses/${id.toString()}/goods`
-        )
-            .then((response) => response.json())
-            .then((responses) => setItems(responses));
+        await axios
+            .get(`http://127.0.0.1:8000/api/warehouses/${id.toString()}/goods`)
+            .then((responses) => setItems(responses.data));
     });
 
     const id = window.location.href.split('/')[4];

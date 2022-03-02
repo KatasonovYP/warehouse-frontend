@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import cl from './Storages.module.css';
 import Header from '../../components/Header/Header/Header';
 import StorageCard from '../../components/StorageCard/StorageCard';
@@ -7,9 +9,9 @@ function Storages() {
     const [storages, setStorages] = useState([]);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/api/users/admin/warehouses')
-            .then((response) => response.json())
-            .then((responses) => setStorages(responses));
+        axios
+            .get('http://127.0.0.1:8000/api/users/admin/warehouses')
+            .then((res) => setStorages(res.data));
     }, []);
 
     return (
